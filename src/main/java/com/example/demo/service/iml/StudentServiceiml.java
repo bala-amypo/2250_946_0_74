@@ -12,11 +12,11 @@ import org.springframework.sterotype.service;
 
 
 @Service
-public class StudentServiceiml implements StudentService{
+public class StudentServiceiml implements StudentService{//
     @Autowired
     StudentRepository sr;
 
-    @Override
+    @Override//studentservice la erukka method aah enga define panranun solradhukku
     public Student createData(@RequestBody Student stu){//abstract deffinition
            return sr.save(stu);
     }
