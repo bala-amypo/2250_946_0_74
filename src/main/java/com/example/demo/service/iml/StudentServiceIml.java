@@ -17,7 +17,7 @@ public class StudentServiceIml implements StudentService{
     StudentRepository sr;
 
     @Override//studentservice la erukka method aah enga define panranun solradhukku
-    public Student createData(@RequestBody Student stu){//abstract deffinition
+    public Student createData(Student stu){//abstract deffinition
            return sr.save(stu);
     }
 
