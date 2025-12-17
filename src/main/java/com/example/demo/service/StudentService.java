@@ -7,5 +7,5 @@ public interface StudentService{
 
     public Student createData(Student stu);//abstract method
     public List<Student> fetchRecord();
-    public Optional<Student> fetchDataById(int id);
+    public Optional<Student> fetchDataByCgpa(float cgpa);
 }
