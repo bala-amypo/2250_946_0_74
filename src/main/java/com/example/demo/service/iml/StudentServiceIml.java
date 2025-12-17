@@ -22,7 +22,7 @@ public class StudentServiceIml implements StudentService{
     }
 
     @Override
-    public List<Student> fetchData(){
+    public List<Student> fetchRecord(){
         return sr.findAll();
     }
 }
