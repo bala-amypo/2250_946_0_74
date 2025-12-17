@@ -26,7 +26,7 @@ public class StudentServiceIml implements StudentService{
         return sr.findAll();
     }
     @Override
-    public Optional<Student> fetchDataByCgpa(float cgpa){
-        return sr.findByCgpa(cgpa);
+    public Optional<Student> fetchDataById(int id){
+        return sr.findById(id);
     }
 }
