@@ -12,7 +12,7 @@ import org.springframework.sterotype.service;
 
 
 @Service
-public class StudentServiceIml implements StudentService{//
+public class StudentServiceIml implements StudentService{
     @Autowired
     StudentRepository sr;
 
