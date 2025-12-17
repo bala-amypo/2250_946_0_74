@@ -25,4 +25,8 @@ public class StudentServiceIml implements StudentService{
     public List<Student> fetchRecord(){
         return sr.findAll();
     }
+    @Override
+    public Optional<Student> fetchDataById(int id){
+        return sr.findById(id);
+    }
 }
