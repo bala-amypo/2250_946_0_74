@@ -8,5 +8,5 @@ public interface StudentService{
     public Student createData(Student stu);//abstract method
     public List<Student> fetchRecord();
     public Optional<Student> fetchDataById(int id);
-    public String deleteData(int id);
+    public void deleteData(int id);
 }
