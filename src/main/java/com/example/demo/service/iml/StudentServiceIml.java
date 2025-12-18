@@ -32,7 +32,7 @@ public class StudentServiceIml implements StudentService{
 
     @Override
     public String deleteData(int id){
-        return sr.deleteById(id);
+        sr.deleteById(id);
     }
 
 
