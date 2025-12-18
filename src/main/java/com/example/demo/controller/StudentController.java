@@ -23,11 +23,24 @@ public class StudentController {
     public List<Student> fetchRecord() {
         return ser.fetchRecord();
     }
-    @GetMapping("fetchdatabyid{id}")
+    @GetMapping("fetchdatabyid/{id}")
     public Optional<Student> fetchDataById(@PathVariable int id){
         return ser.fetchDataById(id);
     }
-    @PutMapping("/updatedata")
-    public String
+    @PutMapping("/updatedata/")
+    public String updateDataById(@PathVariable int id,@RequestBody Student stu){
+        Optional<Student> student=ser.fetchdata(id);
+        if(student.isPresent){
+            stu.setId(id);
+            ser.createDate();
+
+            return "Data is update successfully";
+        }
+        else{
+            return id + "is not found";
+            
+        }
+
+    }
 
 }
