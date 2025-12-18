@@ -27,7 +27,7 @@ public class StudentController {
     public Optional<Student> fetchDataById(@PathVariable int id){
         return ser.fetchDataById(id);
     }
-    @PutMapping("/updatedata/")
+    @PutMapping("/updatedata/{id}")
     public String updateDataById(@PathVariable int id,@RequestBody Student stu){
         Optional<Student> student=ser.fetchDataById(id);
         if(student.isPresent()){
