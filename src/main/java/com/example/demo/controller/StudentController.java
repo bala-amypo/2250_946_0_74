@@ -28,5 +28,6 @@ public class StudentController {
         return ser.fetchDataById(id);
     }
     @PutMapping("/updatedata")
+    public String
 
 }
