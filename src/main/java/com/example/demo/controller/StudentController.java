@@ -29,10 +29,10 @@ public class StudentController {
     }
     @PutMapping("/updatedata/")
     public String updateDataById(@PathVariable int id,@RequestBody Student stu){
-        Optional<Student> student=ser.fetchRcord(id);
+        Optional<Student> student=ser.fetchDataById(id);
         if(student.isPresent()){
             stu.setId(id);
-            ser.createData();
+            ser.createData(stu);
 
             return "Data is update successfully";
         }
@@ -43,7 +43,7 @@ public class StudentController {
 
     @DeleteMapping("/deletdata/{id}")
     public String deleteDataById(@PathVariable int id){
-        Optional<Student> student = ser.fetchRecord(id);
+        Optional<Student> student = ser.fetchDataById(id);
         if(student.isPresent()){
             ser.deleteData(id);
             return "Data is Delete Successfully";
