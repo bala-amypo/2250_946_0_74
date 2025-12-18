@@ -31,5 +31,9 @@ public class StudentServiceIml implements StudentService{
     }
 
     @Override
-    public String 
+    public String deletData(int id){
+        return sr.deletById(id);
+    }
+
+
 }
