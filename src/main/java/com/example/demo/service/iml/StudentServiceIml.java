@@ -34,6 +34,4 @@ public class StudentServiceIml implements StudentService{
     public String deleteData(int id){
         sr.deleteById(id);
     }
-
-
 }
